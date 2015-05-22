@@ -1,7 +1,9 @@
 package com.sport.blog;
 
 public class User {
-	//hjjyh
-	//kjgkjg
-
+	
+	private Integer id;
+	private String name;
+	private String password;
+	
 }
