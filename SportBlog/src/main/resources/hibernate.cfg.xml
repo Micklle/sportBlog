@@ -12,7 +12,6 @@
 		<property name="hbm2ddl.auto">create</property>
 
 		<mapping class="com.sport.blog.model.User" />
-		<mapping class="com.sport.blog.model.Role" />
 
 	</session-factory>
 </hibernate-configuration>
