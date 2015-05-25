@@ -1,5 +1,13 @@
 package com.sport.blog.daoImpl;
 
-public class RoleDaoImpl {
+import com.sport.blog.dao.RoleDAO;
+import com.sport.blog.model.Role;
 
+public class RoleDaoImpl extends GeneralDaoImpl<Role> implements RoleDAO{
+
+	public Role getRoleByName(Role name) {
+
+		return null;
+	}
+	
 }

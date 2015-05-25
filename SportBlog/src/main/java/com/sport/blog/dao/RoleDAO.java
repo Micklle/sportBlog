@@ -1,5 +1,7 @@
 package com.sport.blog.dao;
 
-public class RoleDAO {
+import com.sport.blog.model.Role;
 
+public interface RoleDAO {
+	public Role getRoleByName(Role name);
 }
