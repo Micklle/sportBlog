@@ -14,13 +14,9 @@
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hbm2ddl.auto">create</property>
 		
-		<mapping class="table.User"/>
-		<mapping class="table.UserRole"/>
-		<mapping class="table.Reward"/>
-		<mapping class="table.Rating"/>
-		<mapping class="table.Post"/>
-		<mapping class="table.HashTag"/>
-		<mapping class="table.Comment"/>
+		<mapping class="com.sport.blog.model.User"/>
+		<mapping class="com.sport.blog.model.UserRole"/>
+	
 	
 	</session-factory>
 </hibernate-configuration>
