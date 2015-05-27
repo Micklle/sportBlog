@@ -1,5 +1,7 @@
 package com.sport.blog.daoImpl;
 
+import java.io.Serializable;
+
 import org.hibernate.Session;
 
 import com.sport.blog.dao.UserDAO;
@@ -13,7 +15,7 @@ public class UserDaoImpl extends GeneralDaoImpl<User> implements UserDAO{
 		User user = null;
 		try {
 			session = HibernateUtil.getSessionFactory().openSession();
-//			user = (User) session.get(User.class, name);
+			user = (User) session.get(User.class, (Serializable) name);
 		} finally {
 			if ((session != null) && (session.isOpen())) {
 				session.close();
