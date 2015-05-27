@@ -13,6 +13,8 @@
 
 		<mapping class="com.sport.blog.model.User" />
 		<mapping class="com.sport.blog.model.Role" />
+		<mapping class="com.sport.blog.model.Post" />
+		<mapping class="com.sport.blog.model.HashTag"/>
 
 	</session-factory>
 </hibernate-configuration>
