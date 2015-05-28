@@ -8,7 +8,7 @@ public interface GeneralDAO<E> {
 
     public void updateElement(E element);
 
-    public E getElementByID(Long elementId);
+    public E getElementByID(Integer elementId);
 
     public List<E> getAllElements();
 

@@ -17,13 +17,12 @@ import javax.persistence.Id;
 public class Post {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Long id;
 	private String title;
 	private String text;
 	@ManyToMany (fetch = FetchType.LAZY)
-	@JoinTable(name= "postAndHashtag", joinColumns = {@JoinColumn(name="hashtag_id")}, 
+	@JoinTable(name = "post_hashtag", joinColumns = {@JoinColumn(name="hashtag_id")}, 
 	inverseJoinColumns={@JoinColumn (name="post_id")})
-	
 	private List<HashTag> hashTags;
 	//@OneToMany(targetEntity=Rating.class, fetch = FetchType.LAZY, mappedBy="post_id")
 	//private List <Rating> ratings;
@@ -37,10 +36,10 @@ public class Post {
 	public Post(){
 		
 	}
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getTitle() {
