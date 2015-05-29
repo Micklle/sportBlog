@@ -1,14 +1,9 @@
 package com.sport.blog.main;
 
-import java.util.List;
 
 import com.sport.blog.dao.UserDAO;
-import com.sport.blog.daoImpl.GeneralDaoImpl;
-import com.sport.blog.daoImpl.PostDaoImpl;
 import com.sport.blog.daoImpl.RoleDaoImpl;
 import com.sport.blog.daoImpl.UserDaoImpl;
-import com.sport.blog.model.Post;
-import com.sport.blog.model.Role;
 import com.sport.blog.model.User;
 
 public class Main {

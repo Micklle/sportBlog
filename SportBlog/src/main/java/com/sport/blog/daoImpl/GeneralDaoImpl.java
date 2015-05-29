@@ -65,7 +65,7 @@ public abstract class GeneralDaoImpl<E> implements GeneralDAO<E> {
 		List<E> elements = new ArrayList<E>();
 		try {
 			session = HibernateUtil.getSessionFactory().openSession();
-			elements = session.createCriteria(getClass()).list();
+			elements = session.createCriteria(elementClass).list();
 		} finally {
 			if ((session != null) && (session.isOpen())) {
 				session.close();

@@ -15,7 +15,7 @@ public class RoleDaoImpl extends GeneralDaoImpl<Role> implements RoleDAO{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Role getRoleByName(Role name) {
+	public Role getRoleByName(String name) {
 		Session session = null;
 		session = HibernateUtil.getSessionFactory().openSession();
 		Role role = null;

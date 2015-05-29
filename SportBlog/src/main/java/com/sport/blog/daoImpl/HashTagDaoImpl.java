@@ -15,7 +15,7 @@ public class HashTagDaoImpl extends GeneralDaoImpl<HashTag>  implements HashTagD
 		super(HashTag.class);
 		// TODO Auto-generated constructor stub
 	}
-	public HashTag getHashTagByName(HashTag name) {
+	public HashTag getHashTagByName(String name) {
 		Session session = null;
 		HashTag hash = null;
 		try{

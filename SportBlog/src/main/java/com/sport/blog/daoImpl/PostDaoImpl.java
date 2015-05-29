@@ -16,7 +16,7 @@ public class PostDaoImpl extends GeneralDaoImpl <Post> implements PostDAO{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Post getPostByText(Post name) {
+	public Post getPostByText(String name) {
 		Session session= null;
 		Post postName = null;
 		try{
@@ -29,7 +29,7 @@ public class PostDaoImpl extends GeneralDaoImpl <Post> implements PostDAO{
 		return postName;
 	}
 
-	public Post getPostByTitle(Post title) {
+	public Post getPostByTitle(String title) {
 		Session session = null;
 		Post  postTitle= null;
 		try{
