@@ -10,6 +10,11 @@ import com.sport.blog.util.HibernateUtil;
 
 public class RoleDaoImpl extends GeneralDaoImpl<Role> implements RoleDAO{
 
+	public RoleDaoImpl() {
+		super(Role.class);
+		// TODO Auto-generated constructor stub
+	}
+
 	public Role getRoleByName(Role name) {
 		Session session = null;
 		session = HibernateUtil.getSessionFactory().openSession();

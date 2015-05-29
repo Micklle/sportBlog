@@ -6,10 +6,15 @@ import org.hibernate.Session;
 
 import com.sport.blog.dao.HashTagDAO;
 import com.sport.blog.model.HashTag;
+import com.sport.blog.model.User;
 import com.sport.blog.util.HibernateUtil;
 
 public class HashTagDaoImpl extends GeneralDaoImpl<HashTag>  implements HashTagDAO{
-
+	
+	public HashTagDaoImpl() {
+		super(HashTag.class);
+		// TODO Auto-generated constructor stub
+	}
 	public HashTag getHashTagByName(HashTag name) {
 		Session session = null;
 		HashTag hash = null;

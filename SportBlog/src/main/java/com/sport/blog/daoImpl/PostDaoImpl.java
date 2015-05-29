@@ -7,10 +7,14 @@ import org.hibernate.Session;
 
 import com.sport.blog.dao.PostDAO;
 import com.sport.blog.model.Post;
-import com.sport.blog.model.Role;
 import com.sport.blog.util.HibernateUtil;
 
 public class PostDaoImpl extends GeneralDaoImpl <Post> implements PostDAO{
+	
+	public PostDaoImpl() {
+		super(Post.class);
+		// TODO Auto-generated constructor stub
+	}
 
 	public Post getPostByText(Post name) {
 		Session session= null;

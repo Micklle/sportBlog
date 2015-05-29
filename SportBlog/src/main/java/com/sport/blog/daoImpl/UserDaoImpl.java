@@ -8,13 +8,24 @@ import com.sport.blog.util.HibernateUtil;
 
 public class UserDaoImpl extends GeneralDaoImpl<User> implements UserDAO{
 
-	public User getUserByName(User name) {
+	public UserDaoImpl() {
+		super(User.class);
+		// TODO Auto-generated constructor stub
+	}
+	public User getUserByName(String name) {
 		Session session = null;
 		session = HibernateUtil.getSessionFactory().openSession();
 		User user = null;		
-		user = (User) session.createQuery("select * from user as u where u.name = ?").setParameter(0, name);
+		user = (User) session.createSQLQuery("select * from user as u where u.name = ?").addEntity(User.class).setParameter(0, name);
 		session.close();
 		return user;
 	}
-
+	public User getByID(Integer id){
+		User user = null;
+		Session session = null;
+		session = HibernateUtil.getSessionFactory().openSession();
+		user = (User) session.createSQLQuery("select * from user where id = ?").addEntity(User.class).setParameter(0, id);
+		return user;
+	}
+	
 }

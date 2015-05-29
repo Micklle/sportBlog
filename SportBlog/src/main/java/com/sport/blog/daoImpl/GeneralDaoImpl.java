@@ -11,6 +11,13 @@ import com.sport.blog.util.HibernateUtil;
 
 public abstract class GeneralDaoImpl<E> implements GeneralDAO<E> {
 
+	private Class<E> elementClass;
+
+	public GeneralDaoImpl(Class<E> elementClass) {
+		this.elementClass = elementClass;
+
+	}
+
 	public void addElement(E element) {
 		Session session = null;
 		try {
@@ -44,7 +51,7 @@ public abstract class GeneralDaoImpl<E> implements GeneralDAO<E> {
 		E element = null;
 		try {
 			session = HibernateUtil.getSessionFactory().openSession();
-			element = (E) session.get(getClass(), elementId);
+			element = (E) session.get(elementClass, elementId);
 		} finally {
 			if ((session != null) && (session.isOpen())) {
 				session.close();
