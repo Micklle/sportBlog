@@ -7,7 +7,8 @@ import org.hibernate.Session;
 
 import com.sport.blog.dao.PostDAO;
 import com.sport.blog.model.Post;
-import com.sport.blog.util.HibernateUtil;
+import com.sport.blog.model.User;
+
 
 public class PostDaoImpl extends GeneralDaoImpl <Post> implements PostDAO{
 	
@@ -17,30 +18,11 @@ public class PostDaoImpl extends GeneralDaoImpl <Post> implements PostDAO{
 	}
 
 	public Post getPostByText(String name) {
-		Session session= null;
-		Post postName = null;
-		try{
-			session = HibernateUtil.getSessionFactory().openSession();
-			postName = (Post) session.get(Post.class, (Serializable) name);
-		}finally{
-			if((session!=null) && (session.isOpen()))
-				session.close();
-		}
-		return postName;
+		return (Post) entityManager.createQuery("select u from Post as u where u.name = ?").setParameter(0, name).getSingleResult();
 	}
 
 	public Post getPostByTitle(String title) {
-		Session session = null;
-		Post  postTitle= null;
-		try{
-			session = HibernateUtil.getSessionFactory().openSession();
-			postTitle = (Post) session.get(Post.class, (Serializable) title);
-		}finally{
-			if((session!=null) && (session.isOpen())){
-				session.close();
-			}
-		}
-		return postTitle;
+		return (Post) entityManager.createQuery("select u from user as u where u.title = ?").setParameter(0, title).getSingleResult();
 	}
 
 }

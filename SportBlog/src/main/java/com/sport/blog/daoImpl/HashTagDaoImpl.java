@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import com.sport.blog.dao.HashTagDAO;
 import com.sport.blog.model.HashTag;
 import com.sport.blog.model.User;
-import com.sport.blog.util.HibernateUtil;
+
 
 public class HashTagDaoImpl extends GeneralDaoImpl<HashTag>  implements HashTagDAO{
 	
@@ -16,18 +16,8 @@ public class HashTagDaoImpl extends GeneralDaoImpl<HashTag>  implements HashTagD
 		// TODO Auto-generated constructor stub
 	}
 	public HashTag getHashTagByName(String name) {
-		Session session = null;
-		HashTag hash = null;
-		try{
-			session=HibernateUtil.getSessionFactory().openSession();
-			hash= (HashTag) session.get(HashTag. class, (Serializable) name);
-		} finally{
-			if((session!=null) && (session.isOpen())){
-				session.close();
-			}
-		}
-		
-		return hash;
+		return (HashTag) entityManager.createQuery("select u from HashTag as u where u.name = ?").setParameter(0, name).getSingleResult();
 	}
+	
 
 }
