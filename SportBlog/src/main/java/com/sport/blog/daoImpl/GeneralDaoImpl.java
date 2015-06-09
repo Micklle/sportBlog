@@ -3,87 +3,47 @@ package com.sport.blog.daoImpl;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+
 
 import com.sport.blog.dao.GeneralDAO;
-import com.sport.blog.util.HibernateUtil;
 
 public abstract class GeneralDaoImpl<E> implements GeneralDAO<E> {
 
 	private Class<E> elementClass;
+	
+	@PersistenceContext(name="sportBlog")
+	EntityManager entityManager;
 
 	public GeneralDaoImpl(Class<E> elementClass) {
 		this.elementClass = elementClass;
 
 	}
 
+	@Transactional
 	public void addElement(E element) {
-		Session session = null;
-		try {
-			session = HibernateUtil.getSessionFactory().openSession();
-			Transaction transaction = session.beginTransaction();
-			session.save(element);
-			transaction.commit();
-		} finally {
-			if ((session != null) && (session.isOpen())) {
-				session.close();
-			}
-		}
+		entityManager.persist(element);
+		entityManager.flush();
 	}
 
 	public void updateElement(E element) {
-		Session session = null;
-		try {
-			session = HibernateUtil.getSessionFactory().openSession();
-			Transaction transaction = session.beginTransaction();
-			session.update(element);
-			transaction.commit();
-		} finally {
-			if ((session != null) && (session.isOpen())) {
-				session.close();
-			}
-		}
+		entityManager.merge(element);
 	}
-
-	public E getElementByID(Integer elementId) {
-		Session session = null;
-		E element = null;
-		try {
-			session = HibernateUtil.getSessionFactory().openSession();
-			element = (E) session.get(elementClass, elementId);
-		} finally {
-			if ((session != null) && (session.isOpen())) {
-				session.close();
-			}
-		}
-		return element;
+	
+	@SuppressWarnings("unchecked")
+	@Transactional
+	public E getElementByID(Integer elementId) {		
+		return (E) entityManager.createQuery("from " + elementClass.getSimpleName() + " e where e.id = :id").setParameter("id", elementId).getSingleResult();
 	}
-
+	@SuppressWarnings("unchecked")
+	@Transactional
 	public List<E> getAllElements() {
-		Session session = null;
-		List<E> elements = new ArrayList<E>();
-		try {
-			session = HibernateUtil.getSessionFactory().openSession();
-			elements = session.createCriteria(elementClass).list();
-		} finally {
-			if ((session != null) && (session.isOpen())) {
-				session.close();
-			}
-		}
-		return elements;
+		return entityManager.createQuery("from " + elementClass.getSimpleName()).getResultList();
 	}
-
+	@Transactional
 	public void deleteElement(E element) {
-		Session session = null;
-		try {
-			session = HibernateUtil.getSessionFactory().openSession();
-			Transaction transaction = session.beginTransaction();
-			session.delete(element);
-			transaction.commit();
-		} finally {
-			if ((session != null) && (session.isOpen())) {
-			}
-		}
+		entityManager.remove(entityManager.merge(element));
 	}
 }

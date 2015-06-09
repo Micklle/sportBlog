@@ -1,27 +1,20 @@
 package com.sport.blog.daoImpl;
 
-import java.io.Serializable;
+import javax.transaction.Transactional;
 
-import org.hibernate.Session;
+import org.springframework.stereotype.Repository;
 
 import com.sport.blog.dao.RoleDAO;
 import com.sport.blog.model.Role;
-import com.sport.blog.util.HibernateUtil;
-
+@Repository
 public class RoleDaoImpl extends GeneralDaoImpl<Role> implements RoleDAO{
 
 	public RoleDaoImpl() {
 		super(Role.class);
-		// TODO Auto-generated constructor stub
 	}
-
+	@Transactional
 	public Role getRoleByName(String name) {
-		Session session = null;
-		session = HibernateUtil.getSessionFactory().openSession();
-		Role role = null;
-		role = (Role) session.createQuery("select * from role as r where r.name = ?").setParameter(0, name);
-		session.close();
-		return role;
+		return (Role) entityManager.createQuery("select r from role as r where r.name = ?").setParameter(0, name).getSingleResult();
 	}
 	
 }

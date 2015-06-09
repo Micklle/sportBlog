@@ -1,31 +1,31 @@
 package com.sport.blog.daoImpl;
 
-import org.hibernate.Session;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
 
 import com.sport.blog.dao.UserDAO;
 import com.sport.blog.model.User;
-import com.sport.blog.util.HibernateUtil;
 
+@Repository
 public class UserDaoImpl extends GeneralDaoImpl<User> implements UserDAO{
 
 	public UserDaoImpl() {
 		super(User.class);
-		// TODO Auto-generated constructor stub
 	}
+	@Transactional
 	public User getUserByName(String name) {
-		Session session = null;
-		session = HibernateUtil.getSessionFactory().openSession();
-		User user = null;		
-		user = (User) session.createSQLQuery("select * from user as u where u.name = ?").addEntity(User.class).setParameter(0, name);
-		session.close();
-		return user;
+		return (User) entityManager.createQuery("select u from user as u where u.name = ?").setParameter(0, name).getSingleResult();
 	}
+	@Transactional
 	public User getByID(Integer id){
-		User user = null;
-		Session session = null;
-		session = HibernateUtil.getSessionFactory().openSession();
-		user = (User) session.createSQLQuery("select * from user where id = ?").addEntity(User.class).setParameter(0, id);
-		return user;
+		return (User) entityManager.createQuery("select u from user as u where u.id = ?").setParameter(0, id).getSingleResult();
+	}
+	@Transactional
+	public List<User> getByRoleName(String name) {
+		return entityManager.createQuery("SELECT * FROM test.user as u where role_id=(select id from role where name = ?)").setParameter(0, name).getResultList();
 	}
 	
 }
