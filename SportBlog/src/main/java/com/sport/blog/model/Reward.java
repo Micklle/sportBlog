@@ -25,8 +25,9 @@ public class Reward {
 	
 	public Reward() {	}
 	
-	public Reward (User id, Double money) {
-		this.id = id;
+//	public Reward (User id, Double money) {
+//		this.id = id;
+	public Reward (Double money) {
 		this.money = money;
 	}
 	
