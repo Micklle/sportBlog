@@ -6,12 +6,13 @@ import javax.transaction.Transactional;
 
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
+import org.springframework.stereotype.Repository;
 
 import com.sport.blog.dao.PostDAO;
 import com.sport.blog.model.Post;
 import com.sport.blog.model.User;
 
-
+@Repository
 public class PostDaoImpl extends GeneralDaoImpl <Post> implements PostDAO{
 	
 	public PostDaoImpl() {

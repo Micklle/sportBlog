@@ -2,9 +2,12 @@ package com.sport.blog.daoImpl;
 
 import javax.transaction.Transactional;
 
+import org.springframework.stereotype.Repository;
+
 import com.sport.blog.dao.HashTagDAO;
 import com.sport.blog.model.HashTag;
 
+@Repository
 public class HashTagDaoImpl extends GeneralDaoImpl<HashTag>  implements HashTagDAO{
 	
 	public HashTagDaoImpl() {

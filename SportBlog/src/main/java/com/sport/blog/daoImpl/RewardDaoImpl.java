@@ -9,7 +9,7 @@ import com.sport.blog.model.Reward;
 @Repository
 public class RewardDaoImpl extends GeneralDaoImpl<Reward> implements RewardDAO{
 
-	public RewardDaoImpl(Class<Reward> elementClass) {
+	public RewardDaoImpl() {
 		super(Reward.class);
 		// TODO Auto-generated constructor stub
 	}
