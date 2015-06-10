@@ -1,15 +1,9 @@
 package com.sport.blog.daoImpl;
 
-import java.io.Serializable;
-
 import javax.transaction.Transactional;
-
-import org.hibernate.Session;
 
 import com.sport.blog.dao.HashTagDAO;
 import com.sport.blog.model.HashTag;
-import com.sport.blog.model.User;
-
 
 public class HashTagDaoImpl extends GeneralDaoImpl<HashTag>  implements HashTagDAO{
 	
