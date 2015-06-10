@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import com.sport.blog.dao.HashTagDAO;
 import com.sport.blog.model.HashTag;
 import com.sport.blog.model.User;
-import com.sport.blog.util.HibernateUtil;
+
 
 public class HashTagDaoImpl extends GeneralDaoImpl<HashTag>  implements HashTagDAO{
 	

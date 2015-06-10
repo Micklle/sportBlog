@@ -1,4 +1,4 @@
-package com.sport.blog.daoImpl;
+/*package com.sport.blog.daoImpl;
 
 import org.hibernate.Session;
 
@@ -25,4 +25,4 @@ public class RewardDaoImpl extends GeneralDaoImpl<Reward> implements RewardDAO{
 		
 	}
 
-}
+}*/
