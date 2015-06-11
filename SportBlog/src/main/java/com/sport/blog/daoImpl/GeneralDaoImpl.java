@@ -1,6 +1,5 @@
 package com.sport.blog.daoImpl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -27,7 +26,7 @@ public abstract class GeneralDaoImpl<E> implements GeneralDAO<E> {
 		entityManager.persist(element);
 		entityManager.flush();
 	}
-
+	@Transactional
 	public void updateElement(E element) {
 		entityManager.merge(element);
 	}

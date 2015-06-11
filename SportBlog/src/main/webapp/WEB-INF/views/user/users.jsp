@@ -19,9 +19,9 @@
 	</thead>
 	<c:forEach items="${usersList}" var="user">
 		<tr>
-			<td><a href="users/${user.id}">${user.id }</a></td>
-			<td><a href="users/name/${user.userName}">${user.userName }</a></td>
-			<td><a href="users/email/${user.email}">${user.email }</a></td>
+			<td>${user.id }</td>
+			<td>${user.name }</td>
+			<td>${user.email }</td>
 		</tr>
 	</c:forEach>
 </table>

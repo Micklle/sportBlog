@@ -20,11 +20,7 @@
 		<put-attribute name="title" value="Users" />
 		<put-attribute name="main_content" value="/WEB-INF/views/user/users.jsp" />
 	</definition>
-	
-	<definition name="user" extends="base.definition">
-		<put-attribute name="title" value="User" />
-		<put-attribute name="main_content" value="/WEB-INF/views/user/user.jsp" />
-	</definition>
+
 	
 	<definition name="registration" extends="base.definition">
 		<put-attribute name="title" value="Registration" />

@@ -17,13 +17,13 @@
 		<h1>REGISTRATION</h1>
 		<form action="users/create" method="post">
 			<div class="form-group">
-				<label for="name">Name:</label><input type="text" class="form-control" id="name" placeholder="Enter name" />
+				<label for="name">Name:</label><input name="name" type="text" class="form-control" id="name" placeholder="Enter name" />
 			</div>
 			<div class="form-group">
-				<label for="email">Email:</label> <input type="email" class="form-control" id="email" placeholder="Enter email" />
+				<label for="email">Email:</label> <input name="email" type="email" class="form-control" placeholder="Enter email" />
 			</div>
 			<div class="form-group">
-				<label for="password">Password:</label><input type="password" class="form-control" id="pwd" placeholder="Enter password" />
+				<label for="password">Password:</label><input name="pwd" type="password" class="form-control" placeholder="Enter password" />
 			</div>
 			<input type="submit" class="btn btn-default" value="REGISTRATION" />
 		</form>

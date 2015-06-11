@@ -18,12 +18,11 @@ public class UserController {
 
 	@Inject
 	private UserService userService;
-
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView getUsers(ModelAndView model) {
 		model.addObject("usersList", userService.getAllUsers());
-		model.setViewName("user");
+		model.setViewName("users");
 		return model;
 	}
 	
@@ -35,9 +34,13 @@ public class UserController {
 
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
-	public String createUser( @RequestParam String name, @RequestParam String email, @RequestParam String pwd) {
+	public String createUser(@RequestParam String email,
+			@RequestParam String name, @RequestParam String pwd) {
+
 		userService.saveUser(name, email, pwd);
+
 		return "users";
+		
 	}
 
 }

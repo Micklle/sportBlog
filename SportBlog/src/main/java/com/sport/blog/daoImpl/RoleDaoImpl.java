@@ -16,5 +16,4 @@ public class RoleDaoImpl extends GeneralDaoImpl<Role> implements RoleDAO{
 	public Role getRoleByName(String name) {
 		return (Role) entityManager.createQuery("select r from role as r where r.name = ?").setParameter(0, name).getSingleResult();
 	}
-	
 }
