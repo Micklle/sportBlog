@@ -27,7 +27,7 @@
 	</definition>
 	
 	<definition name="registration" extends="base.definition">
-		<put-attribute name="title" value="registration" />
+		<put-attribute name="title" value="Registration" />
 		<put-attribute name="main_content" value="/WEB-INF/views/user/reg.jsp" />
 	</definition>
 	

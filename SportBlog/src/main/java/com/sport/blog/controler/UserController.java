@@ -1,7 +1,5 @@
 package com.sport.blog.controler;
 
-import java.util.Locale;
-
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
@@ -10,11 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.sport.blog.service.UserService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 
 	@Inject
@@ -22,9 +21,10 @@ public class UserController {
 
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public String getUsers(Model model) {
-		model.addAttribute("users", userService.getAllUsers());
-		return "users";
+	public ModelAndView getUsers(ModelAndView model) {
+		model.addObject("usersList", userService.getAllUsers());
+		model.setViewName("user");
+		return model;
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
@@ -35,9 +35,9 @@ public class UserController {
 
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
-	public String createUser( @RequestParam String userName, @RequestParam String userEmail, @RequestParam String password) {
-		userService.saveUser(userName, userEmail, password);
-		return "redirect:/users";
+	public String createUser( @RequestParam String name, @RequestParam String email, @RequestParam String pwd) {
+		userService.saveUser(name, email, pwd);
+		return "users";
 	}
 
 }
