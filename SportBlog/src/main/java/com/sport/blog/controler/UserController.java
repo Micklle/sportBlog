@@ -23,31 +23,20 @@ public class UserController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String getUsers(Model model) {
-
 		model.addAttribute("users", userService.getAllUsers());
-
-		return "user/user";
-	}
-
-	@RequestMapping(value="/login" , method=RequestMethod.GET)
-	public String login(Model model){
-		return "user/login";
+		return "users";
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public String getUserById(Model model, @PathVariable Integer id) {
-
 		model.addAttribute("userInfo", userService.getUserInfo(id));
-
 		return "user";
 	}
 
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
-	public String createUser(@RequestParam String email, @RequestParam String userName, @RequestParam String password) {
-
-		userService.saveUser(userName, password);
-
+	public String createUser( @RequestParam String userName, @RequestParam String userEmail, @RequestParam String password) {
+		userService.saveUser(userName, userEmail, password);
 		return "redirect:/users";
 	}
 

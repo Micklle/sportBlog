@@ -33,8 +33,8 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public void saveUser(String userName, String password) {
-		userDao.addElement(new User(userName, password));
+	public void saveUser(String userName, String userEmail, String password) {
+		userDao.addElement(new User(userName, userEmail, password));
 	}
 
 }

@@ -20,6 +20,10 @@ public class UserDaoImpl extends GeneralDaoImpl<User> implements UserDAO{
 		return (User) entityManager.createQuery("select u from user as u where u.name = ?").setParameter(0, name).getSingleResult();
 	}
 	@Transactional
+	public User getUserByEmail(String email) {
+		return (User) entityManager.createQuery("select u from user as u where u.email = ?").setParameter(0, email).getSingleResult();
+	}
+	@Transactional
 	public User getByID(Integer id){
 		return (User) entityManager.createQuery("select u from user as u where u.id = ?").setParameter(0, id).getSingleResult();
 	}

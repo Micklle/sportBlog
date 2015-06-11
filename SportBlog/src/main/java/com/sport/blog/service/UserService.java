@@ -10,6 +10,6 @@ public interface UserService {
 	
 	User getUserInfo(Integer userId);
 	
-	void saveUser(String userName, String password);
+	void saveUser(String userName, String userEmail, String password);
 	
 }

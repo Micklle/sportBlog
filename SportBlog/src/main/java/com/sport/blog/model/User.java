@@ -19,6 +19,7 @@ public class User {
 	@Column(name="id")
 	private Integer id;
 	private String name;
+	private String email;
 	private String password;
 	
 	@OneToOne
@@ -27,16 +28,25 @@ public class User {
 	
 	public User() {	}
 
-	public User(String name, String password) {
-		super();
+	public User(String name, String email, String password) {
 		this.name = name;
 		this.password = password;
+		this.email = email;
 	}
 
-	public User (String name, String password, Role role) {
+	public User (String name, String email, String password, Role role) {
 		this.name = name;
+		this.email = email;
 		this.password = password;
 		this.role = role;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public Integer getId() {
