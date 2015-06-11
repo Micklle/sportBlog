@@ -4,9 +4,10 @@
 <title>Home</title>
 </head>
 <body>
-	<h1>Welcome to Logos Demo home page!</h1>
+	<h1>Welcome to Sport Blog!</h1>
+	
 
-	<a href="users">Users</a>
+	<a href="user/login">LOG IN or Registration</a>
 
 </body>
 </html>

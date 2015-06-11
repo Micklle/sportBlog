@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 
 import com.sport.blog.dao.PostDAO;
 import com.sport.blog.model.Post;
-import com.sport.blog.model.Role;
 import com.sport.blog.service.PostService;
 
 @Service
 public class PostServiceImpl implements PostService {
+	
 	@Inject
 	private PostDAO postdao;
 

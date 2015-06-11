@@ -16,7 +16,5 @@ public class HomeController {
 		return "home";
 	}
 	
-	public String hone2(){
-		return null;
-	}
+	
 }

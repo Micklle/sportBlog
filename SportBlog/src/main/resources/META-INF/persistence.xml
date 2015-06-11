@@ -7,6 +7,11 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>com.sport.blog.model.User</class>
 		<class>com.sport.blog.model.Role</class>
+		<class>com.sport.blog.model.Comment</class>
+		<class>com.sport.blog.model.Rating</class>
+		<class>com.sport.blog.model.Reward</class>
+		<class>com.sport.blog.model.HashTag</class>
+		<class>com.sport.blog.model.Post</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
