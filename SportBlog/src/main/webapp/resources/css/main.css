@@ -28,14 +28,14 @@ body {
 	position: absolute;
 	left: 0;
 	top: 50px;
-	width: 200px;
+	width: 170px;
 	border: 1px solid #eee;
 	border-bottom: 1px solid white;
 }
 
 .content {
 	position: absolute;
-	left: 199px;
+	left:169px;
 	top: 50px;
 	right: 0;
 	bottom: 0;
