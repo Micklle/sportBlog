@@ -13,20 +13,46 @@
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div id="reg">
-		<h1>REGISTRATION</h1>
-		<form action="users/create" method="post">
-			<div class="form-group">
-				<label for="name">Name:</label><input name="name" type="text" class="form-control" id="name" placeholder="Enter name" />
-			</div>
-			<div class="form-group">
-				<label for="email">Email:</label> <input name="email" type="email" class="form-control" placeholder="Enter email" />
-			</div>
-			<div class="form-group">
-				<label for="password">Password:</label><input name="pwd" type="password" class="form-control" placeholder="Enter password" />
-			</div>
-			<input type="submit" class="btn btn-default" value="REGISTRATION" />
-		</form>
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#reg">Registration</a></li>
+			<li><a data-toggle="tab" href="#login">Login</a></li>
+		</ul>
+	</div>
+
+	<div class="tab-content">
+		<div id="reg" class="tab-pane fade in active">
+			<h1>REGISTRATION</h1>
+			<form action="users/create" method="post">
+				<div class="form-group">
+					<label for="name">Name:</label><input name="name" type="text"
+						class="form-control" id="name" placeholder="Enter name" />
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label> <input name="email" type="email"
+						class="form-control" placeholder="Enter email" />
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label><input name="pwd"
+						type="password" class="form-control" placeholder="Enter password" />
+				</div>
+				<input type="submit" class="btn btn-default" value="REGISTRATION" />
+			</form>
+		</div>
+		<div id="login" class="tab-pane fade">
+			<h1>Login</h1>
+			<form action="users/create" method="post">
+				<div class="form-group">
+					<label for="name">Name:</label><input name="name" type="text"
+						class="form-control" id="name" placeholder="Enter name" />
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label><input name="pwd"
+						type="password" class="form-control" placeholder="Enter password" />
+				</div>
+				<input type="submit" class="btn btn-default" value="LOGIN" />
+			</form>
+		</div>
 	</div>
 </body>
 </html>

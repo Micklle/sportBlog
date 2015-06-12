@@ -10,4 +10,5 @@ public interface UserDAO extends GeneralDAO<User> {
 	public User getUserByEmail(String email);
 	public User getByID(Integer id);
 	public List<User> getByRoleName(String name);
+	public List<User> getByRoleId(Integer id);
 }	

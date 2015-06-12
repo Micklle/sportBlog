@@ -1,6 +1,7 @@
 package com.sport.blog.controler;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +22,9 @@ public class UserController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView getUsers(ModelAndView model) {
-		model.addObject("usersList", userService.getAllUsers());
+		model.addObject("allUserList", userService.getAllUsers());
+//		model.addObject("userList", userService.getUsers(2));
+//		model.addObject("adminList", userService.getAdmins(1));
 		model.setViewName("users");
 		return model;
 	}

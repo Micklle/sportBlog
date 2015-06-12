@@ -19,8 +19,19 @@ public class UserServiceImpl implements UserService {
 	@Transactional
 	public List<User> getAllUsers() {
 		return userDao.getAllElements();
+	}		
+	@Override
+	@Transactional
+	public List<User> getUsers(Integer id) {
+		return userDao.getByRoleId(id);
 	}
-
+	
+	@Override
+	@Transactional
+	public List<User> getAdmins(Integer id) {
+		return userDao.getByRoleId(id);
+	}
+	
 	@Override
 	@Transactional
 	public User getUserInfo(Integer userId) {
@@ -36,5 +47,6 @@ public class UserServiceImpl implements UserService {
 	public void saveUser(String userName, String userEmail, String password) {
 		userDao.addElement(new User(userName, userEmail, password));
 	}
+
 
 }
