@@ -8,9 +8,7 @@ import com.sport.blog.model.User;
 public interface UserService {
 	List<User> getAllUsers();
 	
-	List<User> getUsers(Integer id);
-	
-	List<User> getAdmins(Integer id);
+	List<User> getUserByRoleId(Integer id);
 	
 	User getUserInfo(Integer userId);
 	

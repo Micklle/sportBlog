@@ -23,6 +23,8 @@
 	<beans:import resource="tiles-context.xml" />
 
 	<!-- Load @Controllers only -->
+	
+	
 	<context:component-scan base-package="com.sport.blog.controler"
 		use-default-filters="false">
 		<context:include-filter expression="org.springframework.stereotype.Controller"

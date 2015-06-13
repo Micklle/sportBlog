@@ -18,8 +18,11 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private Integer id;
+	@Column
 	private String name;
+	@Column
 	private String email;
+	@Column
 	private String password;
 	
 	@OneToOne
@@ -80,6 +83,4 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-	
-	
 }

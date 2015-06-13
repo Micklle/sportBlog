@@ -21,26 +21,28 @@
 		</ul>
 	</div>
 
-		<div class="tab-content">
-			<div id="all" class="tab-pane fade in active">
-				<table id="users_table" class="table default_table">
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>Name</th>
-							<th>Email</th>
-						</tr>
-					</thead>
-					<c:forEach items="${allUserList}" var="user">
-						<tr>
-							<td>${user.id}</td>
-							<td>${user.name }</td>
-							<td>${user.email }</td>
-						</tr>
-					</c:forEach>
-				</table>
-			</div>
-			<%-- <div id="user" class="tab-pane fade">
+	<div class="tab-content">
+		<div id="all" class="tab-pane fade in active">
+
+			<table id="users_table" class="table default_table">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Email</th>
+					</tr>
+				</thead>
+				<c:forEach items="${allUserList}" var="user">
+					<tr>
+						<td>${user.id }</td>
+						<td>${user.name }</td>
+						<td>${user.email }</td>
+					</tr>
+				</c:forEach>
+			</table>
+
+		</div>
+		<%-- <div id="user" class="tab-pane fade">
 				<table id="users_table" class="table default_table">
 					<thead>
 						<tr>
@@ -58,7 +60,7 @@
 					</c:forEach>
 				</table>
 			</div> --%>
-			<%-- <div id="admin" class="tab-pane fade">
+		<%-- <div id="admin" class="tab-pane fade">
 				<table id="users_table" class="table default_table">
 					<thead>
 						<tr>
@@ -76,6 +78,6 @@
 					</c:forEach>
 				</table>
 			</div> --%>
-			</div>
+	</div>
 </body>
 </html>

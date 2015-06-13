@@ -23,8 +23,8 @@ public class UserController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView getUsers(ModelAndView model) {
 		model.addObject("allUserList", userService.getAllUsers());
-//		model.addObject("userList", userService.getUsers(2));
-//		model.addObject("adminList", userService.getAdmins(1));
+//		model.addObject("userList", userService.getUserByRoleId(2));
+//		model.addObject("adminList", userService.getUserByRoleId(1));
 		model.setViewName("users");
 		return model;
 	}
@@ -38,11 +38,11 @@ public class UserController {
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public String createUser(@RequestParam String email,
-			@RequestParam String name, @RequestParam String pwd) {
+			@RequestParam String userName, @RequestParam String password) {
 
-		userService.saveUser(name, email, pwd);
+		userService.saveUser(userName, email, password);
 
-		return "users";
+		return "redirect:/users";
 		
 	}
 

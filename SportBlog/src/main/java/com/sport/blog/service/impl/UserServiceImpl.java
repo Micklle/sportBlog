@@ -15,20 +15,13 @@ public class UserServiceImpl implements UserService {
 	@Inject
 	private UserDAO userDao;
 
-	@Override
 	@Transactional
 	public List<User> getAllUsers() {
 		return userDao.getAllElements();
 	}		
 	@Override
 	@Transactional
-	public List<User> getUsers(Integer id) {
-		return userDao.getByRoleId(id);
-	}
-	
-	@Override
-	@Transactional
-	public List<User> getAdmins(Integer id) {
+	public List<User> getUserByRoleId(Integer id) {
 		return userDao.getByRoleId(id);
 	}
 	

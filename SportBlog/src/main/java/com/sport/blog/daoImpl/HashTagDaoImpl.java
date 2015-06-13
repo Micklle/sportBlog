@@ -1,8 +1,8 @@
 package com.sport.blog.daoImpl;
 
-import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.sport.blog.dao.HashTagDAO;
 import com.sport.blog.model.HashTag;

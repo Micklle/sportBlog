@@ -2,9 +2,8 @@ package com.sport.blog.daoImpl;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
-
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.sport.blog.dao.UserDAO;
 import com.sport.blog.model.User;
