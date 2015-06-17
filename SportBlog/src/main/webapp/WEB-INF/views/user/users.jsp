@@ -12,15 +12,6 @@
 </head>
 <body>
 
-	<div class="container">
-		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#all">All
-					Users</a></li>
-			<li><a data-toggle="tab" href="#user">Users</a></li>
-			<li><a data-toggle="tab" href="#admin">Admins</a></li>
-		</ul>
-	</div>
-
 	<div class="tab-content">
 		<div id="all" class="tab-pane fade in active">
 
@@ -42,42 +33,7 @@
 			</table>
 
 		</div>
-		<%-- <div id="user" class="tab-pane fade">
-				<table id="users_table" class="table default_table">
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>Name</th>
-							<th>Email</th>
-						</tr>
-					</thead>
-					<c:forEach items="${userList}" var="user">
-						<tr>
-							<td>${user.id}</td>
-							<td>${user.name }</td>
-							<td>${user.email }</td>
-						</tr>
-					</c:forEach>
-				</table>
-			</div> --%>
-		<%-- <div id="admin" class="tab-pane fade">
-				<table id="users_table" class="table default_table">
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>Name</th>
-							<th>Email</th>
-						</tr>
-					</thead>
-					<c:forEach items="${adminList}" var="user">
-						<tr>
-							<td>${user.id}</td>
-							<td>${user.name }</td>
-							<td>${user.email }</td>
-						</tr>
-					</c:forEach>
-				</table>
-			</div> --%>
+		
 	</div>
 </body>
 </html>

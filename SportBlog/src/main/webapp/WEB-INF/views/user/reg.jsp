@@ -46,7 +46,7 @@
 		</div>
 		<div id="login" class="tab-pane fade in active">
 			<h1>Login</h1>
-			<form action="users/create" method="post">
+			<form action="users/login" method="post">
 				<div class="form-group">
 					<label for="name">Name:</label><input name="name" type="text"
 						class="form-control" id="name" placeholder="Enter name" />

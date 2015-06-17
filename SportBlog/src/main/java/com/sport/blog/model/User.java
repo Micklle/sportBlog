@@ -24,7 +24,7 @@ public class User {
 	private String email;
 	@Column
 	private String password;
-	
+
 	@OneToOne
 	@JoinColumn(name="role_id")
 	private Role role;
@@ -35,6 +35,7 @@ public class User {
 		this.name = name;
 		this.password = password;
 		this.email = email;
+		this.role.setId(2);
 	}
 
 	public User (String name, String email, String password, Role role) {

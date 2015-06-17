@@ -7,3 +7,4 @@ INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Akeem","Mauris@tellus.ne
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Hayden","lacus@interdum.co.uk","YFF13ARH4TO");
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Jamal","eu.tempor.erat@ullamcorpernislarcu.edu","NEK94KBM5KX");
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Burke","adipiscing.non.luctus@augue.com","XEA40SVE3UG");
+INSERT INTO `user` (`name`,`email`,`password`, role_id) VALUES ("admin","admin@org","admin", "1");

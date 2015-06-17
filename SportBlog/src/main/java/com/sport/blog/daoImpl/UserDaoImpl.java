@@ -16,23 +16,24 @@ public class UserDaoImpl extends GeneralDaoImpl<User> implements UserDAO{
 	}
 	@Transactional
 	public User getUserByName(String name) {
-		return (User) entityManager.createQuery("select u from user as u where u.name = ?").setParameter(0, name).getSingleResult();
+		return (User) entityManager.createQuery("select e from User e where e.name = :name")
+				.setParameter("name", name).getSingleResult();
 	}
 	@Transactional
 	public User getUserByEmail(String email) {
-		return (User) entityManager.createQuery("select u from user as u where u.email = ?").setParameter(0, email).getSingleResult();
+		return (User) entityManager.createNativeQuery("select * from User as u where u.email = :email").setParameter("email", email).getSingleResult();
 	}
 	@Transactional
 	public User getByID(Integer id){
-		return (User) entityManager.createQuery("select u from user as u where u.id = ?").setParameter(0, id).getSingleResult();
+		return (User) entityManager.createNativeQuery("select * from User as u where u.id = :id").setParameter("id", id).getSingleResult();
 	}
 	@Transactional
 	public List<User> getByRoleName(String name) {
-		return (List<User>) entityManager.createQuery("SELECT u FROM user as u where role_id=(select id from role where name = ?)").setParameter(0, name).getResultList();
+		return (List<User>) entityManager.createNativeQuery("SELECT * FROM User as u where role_id=(select id from role where name = :name)").setParameter("name", name).getResultList();
 	}
 	@Transactional
 	public List<User> getByRoleId(Integer id) {
-		return (List<User>) entityManager.createQuery("select u FROM user as u where u.role_id = ?").setParameter(0, id).getResultList();
+		return (List<User>) entityManager.createNativeQuery("select * FROM user as u where u.role_id = :id").setParameter("id", id).getResultList();
 	}
 	
 }

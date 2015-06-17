@@ -21,14 +21,19 @@
 		<put-attribute name="main_content" value="/WEB-INF/views/user/users.jsp" />
 	</definition>
 	
+	<definition name="user" extends="base.definition">
+		<put-attribute name="title" value="User" />
+		<put-attribute name="main_content" value="/WEB-INF/views/user/user.jsp" />
+	</definition>
+	
 	<definition name="login" extends="base.definition">
 		<put-attribute name="title" value="Login" />
 		<put-attribute name="main_content" value="/WEB-INF/views/user/reg.jsp" />
 	</definition>
 	
-	<definition name="registration" extends="base.definition">
-		<put-attribute name="title" value="Registration" />
-		<put-attribute name="main_content" value="/WEB-INF/views/user/reg.jsp" />
+	<definition name="notUser" extends="base.definition">
+		<put-attribute name="title" value="notUser" />
+		<put-attribute name="main_content" value="/WEB-INF/views/user/notUser.jsp" />
 	</definition>
 	
 </tiles-definitions>

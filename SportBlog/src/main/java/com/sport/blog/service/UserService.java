@@ -10,6 +10,8 @@ public interface UserService {
 	
 	List<User> getUserByRoleId(Integer id);
 	
+	User getUserByName(String name);
+	
 	User getUserInfo(Integer userId);
 	
 	void saveUser(String userName, String userEmail, String password);
