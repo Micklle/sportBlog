@@ -20,7 +20,7 @@ public class HashTag {
 	private Integer id;
 	private String name;
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "post_hashtag", joinColumns = { @JoinColumn(name = "post_id") }, inverseJoinColumns = { @JoinColumn(name = "hashtag_id") })
+	@JoinTable(name = "post_hashtag", joinColumns = { @JoinColumn(name = "hashtag_id") }, inverseJoinColumns = { @JoinColumn(name = "post_id") })
 	private List<Post> posts;
 
 	public HashTag() {
@@ -54,5 +54,7 @@ public class HashTag {
 	public void setPosts(List<Post> posts) {
 		this.posts = posts;
 	}
+	
+	
 
 }

@@ -21,7 +21,7 @@ public class Post {
 	private String title;
 	private String text;
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "post_hashtag", joinColumns = { @JoinColumn(name = "hashtag_id") }, inverseJoinColumns = { @JoinColumn(name = "post_id") })
+	@JoinTable(name = "post_hashtag", joinColumns = { @JoinColumn(name = "post_id") }, inverseJoinColumns = { @JoinColumn(name = "hashtag_id") })
 	private List<HashTag> hashTags;
 
 	// @OneToMany(targetEntity=Rating.class, fetch = FetchType.LAZY,
@@ -74,6 +74,8 @@ public class Post {
 	public void setHashTags(List<HashTag> hashTags) {
 		this.hashTags = hashTags;
 	}
+	
+	
 	/*
 	 * public List<Rating> getRatings() { return ratings; } public void
 	 * setRatings(List<Rating> ratings) { this.ratings = ratings; } public

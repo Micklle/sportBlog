@@ -10,30 +10,36 @@
 		<put-attribute name="sidebar" value="/WEB-INF/views/tiles/sidebar.jsp" />
 		<put-attribute name="main_content" value="" />
 	</definition>
-	
+
 	<definition name="home" extends="base.definition">
 		<put-attribute name="title" value="Home" />
 		<put-attribute name="main_content" value="/WEB-INF/views/home.jsp" />
 	</definition>
-	
+
+	<definition name="posts" extends="base.definition">
+		<put-attribute name="title" value="Posts" />
+		<put-attribute name="main_content" value="/WEB-INF/views/post/posts.jsp" />
+	</definition>
+
+
 	<definition name="users" extends="base.definition">
 		<put-attribute name="title" value="Users" />
 		<put-attribute name="main_content" value="/WEB-INF/views/user/users.jsp" />
 	</definition>
-	
+
 	<definition name="user" extends="base.definition">
 		<put-attribute name="title" value="User" />
 		<put-attribute name="main_content" value="/WEB-INF/views/user/user.jsp" />
 	</definition>
-	
+
 	<definition name="login" extends="base.definition">
 		<put-attribute name="title" value="Login" />
 		<put-attribute name="main_content" value="/WEB-INF/views/user/reg.jsp" />
 	</definition>
-	
+
 	<definition name="notUser" extends="base.definition">
 		<put-attribute name="title" value="notUser" />
 		<put-attribute name="main_content" value="/WEB-INF/views/user/notUser.jsp" />
 	</definition>
-	
+
 </tiles-definitions>

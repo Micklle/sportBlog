@@ -2,10 +2,11 @@ package com.sport.blog.service;
 
 import java.util.List;
 
+import com.sport.blog.dto.PostsDTO;
 import com.sport.blog.model.Post;
 
 public interface PostService {
-	List<Post> getAllPosts();
+	List<PostsDTO> getAllPosts();
 
 	Post getPostByText(String name);
 

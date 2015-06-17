@@ -1,4 +1,4 @@
-INSERT INTO `user` (`name`,`email`,`password`) VALUES ("Murphy","non@Nam.org","4203");
+INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Murphy","non@Nam.org","4203");
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Nathaniel","id.libero.Donec@gravida.co.uk","KUU53HQP9PH");
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Josiah","egestas.a.scelerisque@aliquetlibero.edu","CQU11BHM1RA");
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Valentine","nec@Aliquam.edu","SKW58TCZ4XW");
@@ -7,4 +7,4 @@ INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Akeem","Mauris@tellus.ne
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Hayden","lacus@interdum.co.uk","YFF13ARH4TO");
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Jamal","eu.tempor.erat@ullamcorpernislarcu.edu","NEK94KBM5KX");
 INSERT INTO `User` (`name`,`email`,`password`) VALUES ("Burke","adipiscing.non.luctus@augue.com","XEA40SVE3UG");
-INSERT INTO `user` (`name`,`email`,`password`, role_id) VALUES ("admin","admin@org","admin", "1");
+INSERT INTO `User` (`name`,`email`,`password`, role_id) VALUES ("admin","admin@org","admin", "1");
