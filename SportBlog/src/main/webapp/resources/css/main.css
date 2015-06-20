@@ -34,8 +34,10 @@ body {
 	text-transform: uppercase; 
 }
 .nav li a:hover{
-	
 	background-color: #3498db;
+}
+nav li a:ACTIVE{
+	background-color: #52B3D9;
 }
 
 .sidebar {
@@ -45,7 +47,8 @@ body {
 	width: 170px;
 	height:100%;
 	border: 1px solid #eee;
-	border-bottom: 1px solid white;
+	z-index:1;
+	background-color: #fff;
 }
 
 .content {

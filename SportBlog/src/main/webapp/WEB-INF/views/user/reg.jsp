@@ -26,13 +26,13 @@
 			<form action="users/create" method="POST">
 				<div id="user_create">
 					<div class="form-group">
+						<input id="email" type="email"
+							name="email" class="form-control" placeholder="Enter email">
+					</div>
+					<div class="form-group">
 						<input id="userName"
 							type="text" name="userName" class="form-control"
 							placeholder="Enter name">
-					</div>
-					<div class="form-group">
-						<input id="email" type="email"
-							name="email" class="form-control" placeholder="Enter email">
 					</div>
 					<div class="form-group">
 						<input id="password"
@@ -45,13 +45,13 @@
 		</form>
 		</div>
 		<div id="login" class="tab-pane fade in active">
-			<form action="users/login" method="post">
+			<form action="j_spring_security_check" method="post">
 				<div class="form-group">
-					<input name="name" type="text"
-						class="form-control" id="name" placeholder="Enter name" />
+					<input name="j_username" type="text"
+						class="form-control" id="name" placeholder="Enter name" required/>
 				</div>
 				<div class="form-group">
-					<input name="pwd"
+					<input name="j_password"
 						type="password" class="form-control" placeholder="Enter password" />
 				</div>
 				<input type="submit" class="btn btn-default" value="LOGIN" />
