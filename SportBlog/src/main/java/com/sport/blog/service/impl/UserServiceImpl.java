@@ -7,7 +7,9 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
+import com.sport.blog.dao.RoleDAO;
 import com.sport.blog.dao.UserDAO;
+import com.sport.blog.model.Role;
 import com.sport.blog.model.User;
 import com.sport.blog.service.UserService;
 
@@ -16,6 +18,8 @@ public class UserServiceImpl implements UserService {
 
 	@Inject
 	private UserDAO userDao;
+	@Inject
+	private RoleDAO roleDao;
 
 	@Transactional
 	public List<User> getAllUsers() {
@@ -37,7 +41,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	@Transactional
 	public void saveUser(String userName, String userEmail, String password) {
-		userDao.addElement(new User(userName, userEmail, password));
+		userDao.addElement(new User(userName, userEmail, password, roleDao.getRoleByName("user")));
 	}
 
 	public User getUserByName(String name) {
