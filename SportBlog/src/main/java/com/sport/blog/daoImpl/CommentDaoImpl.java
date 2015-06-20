@@ -21,7 +21,7 @@ public class CommentDaoImpl extends GeneralDaoImpl<Comment> implements CommentDA
 	@Transactional
 	public Comment getCommentByText(String text) {
 		// TODO Auto-generated method stub
-		return (Comment) entityManager.createQuery("select c from comment as c where c.text = ?").setParameter(0, text).getSingleResult();
+		return (Comment) entityManager.createQuery("select c from Ñomment as c where c.text = ?").setParameter(1, text).getSingleResult();
 	}
 
 

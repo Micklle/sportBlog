@@ -60,7 +60,7 @@ public class UserDaoImpl extends GeneralDaoImpl<User> implements UserDAO {
 	public List<User> getByRoleId(Integer id) {
 		return (List<User>) entityManager
 				.createNativeQuery(
-						"select * FROM user as u where u.role_id = :id")
+						"select * FROM User as u where u.role_id = :id")
 				.setParameter("id", id).getResultList();
 	}
 

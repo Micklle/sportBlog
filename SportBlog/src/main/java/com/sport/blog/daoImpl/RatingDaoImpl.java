@@ -16,7 +16,7 @@ public class RatingDaoImpl extends GeneralDaoImpl <Rating> implements RatingDAO 
 	@Transactional
 	public Rating getRatingByMark(Integer mark) {
 		// TODO Auto-generated method stub
-		return (Rating) entityManager.createQuery("select r from rating as r where r.mark = ?").setParameter(0, mark).getSingleResult();
+		return (Rating) entityManager.createQuery("select r from Rating as r where r.mark = ?").setParameter(0, mark).getSingleResult();
 	}
 
 }

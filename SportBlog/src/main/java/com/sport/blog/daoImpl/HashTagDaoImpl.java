@@ -16,7 +16,7 @@ public class HashTagDaoImpl extends GeneralDaoImpl<HashTag>  implements HashTagD
 	}
 	@Transactional
 	public HashTag getHashTagByName(String name) {
-		return (HashTag) entityManager.createQuery("select u from HashTag as u where u.name = ?").setParameter(0, name).getSingleResult();
+		return (HashTag) entityManager.createQuery("select u from HashTag as u where u.name = ?").setParameter(1, name).getSingleResult();
 	}
 	
 

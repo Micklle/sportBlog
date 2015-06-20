@@ -15,7 +15,7 @@ public class RewardDaoImpl extends GeneralDaoImpl<Reward> implements RewardDAO{
 	}
 	@Transactional
 	public Reward getRewardByMoney(Double money) {
-		return (Reward) entityManager.createQuery("select * from reward").setParameter(0, money).getSingleResult();
+		return (Reward) entityManager.createQuery("select * from Reward").setParameter(0, money).getSingleResult();
 	}
 
 }
