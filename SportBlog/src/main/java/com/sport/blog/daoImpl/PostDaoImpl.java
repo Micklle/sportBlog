@@ -15,11 +15,11 @@ public class PostDaoImpl extends GeneralDaoImpl <Post> implements PostDAO{
 	}
 	@Transactional
 	public Post getPostByText(String name) {
-		return (Post) entityManager.createQuery("select u from Post as u where u.name = ?").setParameter(0, name).getSingleResult();
+		return (Post) entityManager.createQuery("select u from Post as u where u.name = ?").setParameter(1, name).getSingleResult();
 	}
 	@Transactional
 	public Post getPostByTitle(String title) {
-		return (Post) entityManager.createQuery("select u from Post as u where u.title = ?").setParameter(0, title).getSingleResult();
+		return (Post) entityManager.createQuery("select u from Post as u where u.title = ?").setParameter(1, title).getSingleResult();
 	}
 
 }
