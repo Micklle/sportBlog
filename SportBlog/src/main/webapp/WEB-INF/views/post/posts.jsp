@@ -6,9 +6,9 @@
 	<div class="tab-content">
 		<div id="all" class="tab-pane fade in active">
 
-			<table id="users_table" class="table default_table">
+			<table id="users_table" class="table table-bordered table-striped">
 				<thead>
-					<tr>
+					<tr  class="table-hover">
 						<th>Title</th>
 						<th>Text</th>
 						<th>#</th>

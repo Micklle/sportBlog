@@ -22,25 +22,25 @@
 
 	<div class="tab-content">
 		<div id="reg" class="tab-pane fade">
-			<h1>REGISTRATION</h1>
+			<h1>Registration</h1>
 			<form action="users/create" method="POST">
 				<div id="user_create">
-					<div>
-						<label for="userName">Name</label> <input id="userName"
+					<div class="form-group">
+						<input id="userName"
 							type="text" name="userName" class="form-control"
-							placeholder="name">
+							placeholder="Enter name">
 					</div>
-					<div>
-						<label for="email">Email</label> <input id="email" type="email"
-							name="email" class="form-control" placeholder="example@mail.com">
+					<div class="form-group">
+						<input id="email" type="email"
+							name="email" class="form-control" placeholder="Enter email">
 					</div>
-					<div>
-						<label for="password">Password</label> <input id="password"
+					<div class="form-group">
+						<input id="password"
 							type="password" name="password" class="form-control"
-							placeholder="password">
+							placeholder="Enter password">
 					</div>
 
-					<button class="btn btn-sample" type="submit">Submit</button>
+					<button class="btn btn-default" type="submit">Submit</button>
 				</div>
 		</form>
 		</div>
@@ -48,11 +48,11 @@
 			<h1>Login</h1>
 			<form action="users/login" method="post">
 				<div class="form-group">
-					<label for="name">Name:</label><input name="name" type="text"
+					<input name="name" type="text"
 						class="form-control" id="name" placeholder="Enter name" />
 				</div>
 				<div class="form-group">
-					<label for="password">Password:</label><input name="pwd"
+					<input name="pwd"
 						type="password" class="form-control" placeholder="Enter password" />
 				</div>
 				<input type="submit" class="btn btn-default" value="LOGIN" />

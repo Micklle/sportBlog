@@ -2,10 +2,10 @@
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="sec"%>
 <%@ page session="false"%>
-
+<link href="<c:url value="/resources/css/home.css" />" rel="stylesheet">
 <body>
-	<h1>Home page</h1>
-	<sec:authorize access="isAnonymous()">
-		sdfs
-	</sec:authorize>
+	<div class="home">
+		<h1>Welcome to us sport blog</h1>
+		<p>Using sidebar from navigate the site</p>
+	</div>
 </body>

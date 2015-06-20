@@ -1,0 +1,20 @@
+.home{
+	position:fixed;
+	height:100%;
+	width:100%;
+	background-image: url('sport.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+.home h1{
+	color:#fff;
+	text-transform: uppercase;
+	text-align: left;	
+	margin-left: 10px;
+}
+.home p {
+	color:#fff;
+	font-size: 20px;
+	padding-left: 15px;
+}
