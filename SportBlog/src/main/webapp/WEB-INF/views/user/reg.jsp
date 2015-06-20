@@ -5,6 +5,7 @@
 <html>
 <head>
 <title>registration</title>
+<link href="<c:url value="/resources/css/user.css" />" rel="stylesheet">
 <link rel="stylesheet"
 	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script
@@ -22,7 +23,6 @@
 
 	<div class="tab-content">
 		<div id="reg" class="tab-pane fade">
-			<h1>Registration</h1>
 			<form action="users/create" method="POST">
 				<div id="user_create">
 					<div class="form-group">
@@ -40,12 +40,11 @@
 							placeholder="Enter password">
 					</div>
 
-					<button class="btn btn-default" type="submit">Submit</button>
+					<button class="btn btn-default" type="submit">REGISTRATION</button>
 				</div>
 		</form>
 		</div>
 		<div id="login" class="tab-pane fade in active">
-			<h1>Login</h1>
 			<form action="users/login" method="post">
 				<div class="form-group">
 					<input name="name" type="text"
