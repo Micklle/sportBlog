@@ -10,6 +10,8 @@
 		<sec:authorize access="isAnonymous()"><li class=""><a href="/SportBlog/login">Login</a></li></sec:authorize>
 		<li><a href="/SportBlog/posts">Posts</a></li>
 		<li><a href="/SportBlog/users">Users</a></li>
-
+		<li><a href="/SportBlog/reward">Reward</a></li>
+		
+		
 	</ul>
 </nav>

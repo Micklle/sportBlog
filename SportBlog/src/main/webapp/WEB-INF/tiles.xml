@@ -41,5 +41,10 @@
 		<put-attribute name="title" value="notUser" />
 		<put-attribute name="main_content" value="/WEB-INF/views/user/notUser.jsp" />
 	</definition>
+	
+	<definition name="reward" extends="base.definition">
+		<put-attribute name="title" value="Reward" />
+		<put-attribute name="main_content" value="/WEB-INF/views/reward/reward.jsp" />
+	</definition>
 
 </tiles-definitions>
