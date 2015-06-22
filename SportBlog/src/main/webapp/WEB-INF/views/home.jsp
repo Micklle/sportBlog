@@ -3,9 +3,14 @@
 	prefix="sec"%>
 <%@ page session="false"%>
 <link href="<c:url value="/resources/css/home.css" />" rel="stylesheet">
+
+<head>
+	<title>home</title>
+</head>
+
 <body>
 	<div class="home">
 		<h1>Welcome to own sport blog</h1>
-		<p>Using sidebar from navigate the site</p>
+		<p>Using menu from navigate the site</p>
 	</div>
 </body>

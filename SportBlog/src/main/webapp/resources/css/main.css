@@ -35,11 +35,10 @@ body {
 }
 .sidebar {
 	position: fixed;
-	left: 0;
-	top: 50px;
+	left: -1px;
+	top: -1px;
 	width: 170px;
 	height:100%;
-	border: 1px solid #eee;
 	z-index:1;
 	background-color: #fff;
 }
@@ -55,5 +54,18 @@ body {
 	border-bottom: 1px solid white;
 	padding-top: 1px
 }
-
+.menu{
+	cursor:pointer;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #81CFE0;
+	height: 50px;
+	color:#000;
+	font-size: 19px;
+	font-family:Verdana;
+	padding-top: 10px;
+	width: 171px;
+}
+.panel{
+}
 
