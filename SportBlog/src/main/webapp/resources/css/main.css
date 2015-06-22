@@ -60,7 +60,7 @@ body {
 .hide_menu, .show_menu{
 	position: fixed;
 	height: 50px;
-	width: 85px;
+	width: 170px;
 	padding-top: 10px;
 	cursor:pointer;
 	z-index:1;
@@ -79,7 +79,8 @@ body {
 }
 .show_menu{
 	top:0px;
-	left: 85px;
+	left: 0px;
+	display:none;
 }
 
 
