@@ -3,13 +3,13 @@
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="sec"%>
 
-<div class="internal-buttons">
+<nav class="navbar">
 	<ul class="nav nav-sidebar">
-		<li><a href="/SportBlog/home">Home</a></li>
+		<li class="active"><a href="/SportBlog/home">Home</a></li>
 		<sec:authorize access="hasRole('user')"><li><a href="/SportBlog/users/user">My cabinet</a></li></sec:authorize>
-		<sec:authorize access="isAnonymous()"><li><a href="/SportBlog/login">Login</a></li></sec:authorize>
+		<sec:authorize access="isAnonymous()"><li class=""><a href="/SportBlog/login">Login</a></li></sec:authorize>
 		<li><a href="/SportBlog/posts">Posts</a></li>
 		<li><a href="/SportBlog/users">Users</a></li>
 
 	</ul>
-</div>
+</nav>

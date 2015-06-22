@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="container">
-		<ul class="nav nav-tabs">
+		<ul class="nav navbar-nav">
 			<li><a data-toggle="tab" href="#reg">Registration</a></li>
 			<li class="active"><a data-toggle="tab" href="#login">Login</a></li>
 		</ul>
