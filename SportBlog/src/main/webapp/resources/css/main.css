@@ -14,7 +14,7 @@ body {
 	font-weight:bold;
 	position: fixed;
 	z-index:1;
-	left: 0;
+	left: 170px;
 	right: 0;
 	top: 0;
 	height: 50px;
@@ -35,11 +35,10 @@ body {
 }
 .sidebar {
 	position: fixed;
-	left: -1px;
-	top: -1px;
+	left: 0px;
+	top: 50px;
 	width: 170px;
 	height:100%;
-	z-index:1;
 	background-color: #fff;
 }
 
@@ -50,22 +49,37 @@ body {
 	right: 0;
 	bottom: 0;
 	min-width: 595px;
-	border: 1px solid #eee;
-	border-bottom: 1px solid white;
 	padding-top: 1px
 }
-.menu{
+.hide_menu, .show_menu{
+	position: absolute;
+	height: 50px;
+	width: 85px;
+	padding-top: 10px;
 	cursor:pointer;
+	z-index:1;
+	font-family:Verdana;
+	font-size: 19px;
 	text-align: center;
 	text-transform: uppercase;
-	background-color: #81CFE0;
-	height: 50px;
-	color:#000;
-	font-size: 19px;
-	font-family:Verdana;
-	padding-top: 10px;
-	width: 171px;
+	background-color: #34495E;
+	color:#fff;
+	display: inline-block;
+	
 }
-.panel{
+.hide_menu{
+	top:0px;
+	left: 0px;
 }
+.show_menu{
+	top:0px;
+	left: 85px;
+}
+
+
+
+
+
+
+
 

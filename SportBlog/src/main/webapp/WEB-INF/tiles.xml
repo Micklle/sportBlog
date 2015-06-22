@@ -8,6 +8,8 @@
 	<definition name="base.definition" template="/WEB-INF/views/layout.jsp">
 		<put-attribute name="header" value="/WEB-INF/views/tiles/header.jsp" />
 		<put-attribute name="sidebar" value="/WEB-INF/views/tiles/sidebar.jsp" />
+		<put-attribute name="hide_menu" value="/WEB-INF/views/tiles/hide.jsp" />
+		<put-attribute name="show_menu" value="/WEB-INF/views/tiles/show.jsp" />
 		<put-attribute name="main_content" value="" />
 	</definition>
 

@@ -2,18 +2,8 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="sec"%>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
-<script>
-	$(document).ready(function() {
-		$('.menu').click(function() {
-			$('.panel').toggle("slow");
-		});
-	});
-</script>
+<div class="sidebar">
 <nav class="navbar">
-	<div class="menu">
-		<p>Menu</p>
-	</div>
 	<div class="panel">
 		<ul class="nav nav-sidebar">
 			<li class="active"><a href="/SportBlog/home">Home</a></li>
@@ -29,5 +19,6 @@
 		</ul>
 	</div>
 </nav>
+</div>
 
 
