@@ -11,7 +11,7 @@
 <div class="cabinet">
 	<h1>My cabinet</h1>
 	<h4>${username}</h4>
-	<label for="image" ></label><br>
+	<label class="image" for="image" ></label><br>
 	<a href="<c:url value="/j_spring_security_logout"/>">Log Out</a>
  		
 </div>

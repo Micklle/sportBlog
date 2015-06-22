@@ -23,9 +23,14 @@ body {
 	color: #fff;
 	background-color:#16a085;
 }
+
+.nav{
+	border: none;
+}
 .nav li {
 	text-align: center;
 	display: inline-block;
+	background-color: #DADFE1;
 }
 .nav li a{
 	color:#000;
@@ -39,11 +44,12 @@ body {
 	top: 50px;
 	width: 170px;
 	height:100%;
-	background-color: #fff;
-}
+	background-color: #DADFE1;
+	}
 
 .content {
 	position: absolute;
+	display: block;
 	left:170px;
 	top: 48px;
 	right: 0;
@@ -52,7 +58,7 @@ body {
 	padding-top: 1px
 }
 .hide_menu, .show_menu{
-	position: absolute;
+	position: fixed;
 	height: 50px;
 	width: 85px;
 	padding-top: 10px;
