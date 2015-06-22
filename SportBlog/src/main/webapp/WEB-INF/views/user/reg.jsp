@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="container">
-		<ul class="nav navbar-nav">
+		<ul class="nav nav-pills" role="tablist">
 			<li><a data-toggle="tab" href="#reg">Registration</a></li>
 			<li class="active"><a data-toggle="tab" href="#login">Login</a></li>
 		</ul>
@@ -23,38 +23,59 @@
 
 	<div class="tab-content">
 		<div id="reg" class="tab-pane fade">
-			<form action="users/create" method="POST">
-				<div id="user_create">
-					<div class="form-group">
-						<label for="email">Email</label><input id="email" type="email"
-							name="email" class="form-control" placeholder="Enter email">
+			<form class="form-horizontal" role="form" action="users/create"
+				method="POST">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="email">Email:</label>
+					<div class="col-sm-10">
+						<input id="email" type="email" name="email" class="form-control"
+							placeholder="Enter email">
 					</div>
-					<div class="form-group">
-						<label for="userName">Name</label><input id="userName"
-							type="text" name="userName" class="form-control"
-							placeholder="Enter name">
-					</div>
-					<div class="form-group">
-						<label for="password">Password</label><input id="password"
-							type="password" name="password" class="form-control"
-							placeholder="Enter password">
-					</div>
-
-					<button class="btn btn-default" type="submit">REGISTRATION</button>
 				</div>
-		</form>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="userName">Name:</label>
+					<div class="col-sm-10">
+						<input id="userName" type="text" name="userName"
+							class="form-control" placeholder="Enter name">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="password">Password:</label>
+					<div class="col-sm-10">
+						<input id="password" type="password" name="password"
+							class="form-control" placeholder="Enter password">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+				</div>
+			</form>
+
 		</div>
 		<div id="login" class="tab-pane fade in active">
-			<form action="j_spring_security_check" method="post">
+			<form class="form-horizontal" role="form"
+				action="j_spring_security_check" method="post">
 				<div class="form-group">
-					<label for="userName">Name</label><input name="j_username" type="text"
-						class="form-control" id="name" placeholder="Enter name" required/>
+					<label class="control-label col-sm-2" for="userName">Name:</label>
+					<div class="col-sm-10">
+						<input name="j_username" type="text" class="form-control"
+							id="name" placeholder="Enter name" required />
+					</div>
 				</div>
 				<div class="form-group">
-					<label for="password">Password</label><input name="j_password"
-						type="password" class="form-control" placeholder="Enter password" />
+					<label class="control-label col-sm-2" for="password">Password:</label>
+					<div class="col-sm-10">
+						<input name="j_password" type="password" class="form-control"
+							placeholder="Enter password" />
+					</div>
 				</div>
-				<input type="submit" class="btn btn-default" value="LOGIN" />
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<input type="submit" class="btn btn-default" value="LOGIN" />
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>

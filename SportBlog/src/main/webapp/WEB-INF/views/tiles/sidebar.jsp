@@ -4,7 +4,7 @@
 	prefix="sec"%>
 <div class="sidebar">
 <nav class="navbar">
-		<ul class="nav">
+		<ul class="nav" role="tablist">
 			<li class="active"><a href="/SportBlog/home">Home</a></li>
 			<sec:authorize access="hasRole('user')">
 				<li><a href="/SportBlog/users/user">My cabinet</a></li>
