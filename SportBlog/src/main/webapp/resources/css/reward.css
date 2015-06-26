@@ -1,0 +1,20 @@
+.tab-content{
+	
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top:10px;
+    text-align: center;  
+}
+
+.table-hover{
+	text-align: center;  
+	font-size:150%;
+	background-color: #ffff77;
+	text-transform: uppercase;
+	color: #0000ff;
+}
+
+.table-hover-th{
+	text-align: center;
+}

@@ -1,5 +1,7 @@
 package com.sport.blog.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,10 +25,10 @@ public class Reward {
 	@JoinColumn(name="user_id")
 	private User id;
 	
+	
+//	private List<User> user;
 	public Reward() {	}
 	
-//	public Reward (User id, Double money) {
-//		this.id = id;
 	public Reward (Double money) {
 		this.money = money;
 	}
@@ -54,5 +56,14 @@ public class Reward {
 	public void setMoney(Double money) {
 		this.money = money;
 	}
+
+//	public List<User> getUser() {
+//		return user;
+//	}
+//
+//	public void setUser(List<User> user) {
+//		this.user = user;
+//	}
+
 
 }
