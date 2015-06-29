@@ -30,9 +30,8 @@ public class RewardServiceImpl implements RewardService{
 		List<RewardDTO> r = new ArrayList<RewardDTO>();
 		for (Reward reward : rewardDAO.getAllElements()) {
 			
-			for (User user : userDao.getAllElements()) {
-				r.add(new RewardDTO(reward.getMoney(), user.getName()));
-			}
+				r.add(new RewardDTO(reward.getMoney(), reward.getId().getName()));
+			
 			}
 		return r; 
 		
