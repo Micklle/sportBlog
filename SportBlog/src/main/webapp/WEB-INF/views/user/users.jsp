@@ -12,8 +12,10 @@
 <body>
 
 	<div>
+		<button id="show-user">Show User</button>
 		<div id="all">
-			<table id="users_table"  data-toggle="table" class="table table-bordered table-striped">
+			<table id="users_table" data-toggle="table"
+				class="table table-bordered table-striped">
 				<thead>
 					<tr class="table-hover">
 						<th>Id</th>
@@ -21,15 +23,12 @@
 						<th>Email</th>
 					</tr>
 				</thead>
-				<c:forEach items="${allUserList}" var="user">
-					<tr>
-						<td>${user.id }</td>
-						<td>${user.name }</td>
-						<td>${user.email }</td>
-					</tr>
-				</c:forEach>
+				<tbody id="content">
+
+				</tbody>
 			</table>
 		</div>
 	</div>
 </body>
+<script src="resources/js/user.js"></script>
 </html>

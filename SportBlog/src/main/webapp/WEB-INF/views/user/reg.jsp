@@ -52,8 +52,8 @@
 					</div>
 				</div>
 			</form>
-
 		</div>
+		
 		<div id="login" class="tab-pane fade in active">
 			<form class="form-horizontal" role="form"
 				action="j_spring_security_check" method="post">

@@ -7,11 +7,3 @@
 	margin-left: 10px;
 	margin-top:10px;
 }
-.image{
-	background-image: url('user.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	height:108px;
-	width: 108px;
-	border-radius: 100px; 
-}
