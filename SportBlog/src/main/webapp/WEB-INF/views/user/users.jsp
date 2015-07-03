@@ -10,7 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<div>
 		<button id="show-user">Show User</button>
 		<div id="all">
