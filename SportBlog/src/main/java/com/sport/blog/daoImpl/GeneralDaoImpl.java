@@ -26,8 +26,8 @@ public abstract class GeneralDaoImpl<E> implements GeneralDAO<E> {
 		entityManager.flush();
 	}
 	@Transactional
-	public void updateElement(E element) {
-		entityManager.merge(element);
+	public E updateElement(E element) {
+		return entityManager.merge(element);
 	}
 	
 	@SuppressWarnings("unchecked")

@@ -6,7 +6,7 @@ public interface GeneralDAO<E> {
 	
 	public void addElement(E element);
 
-    public void updateElement(E element);
+    public E updateElement(E element);
 
     public E getElementByID(Integer elementId);
 

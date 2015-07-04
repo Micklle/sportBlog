@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<USER id="1" email="testemail1@gmail.com" name="user1"
+		password="qwerty"/>
+	<USER id="2" email="testemail2@gmail.com" name="user2"
+		password="qwerty"/>
+	<USER id="3" email="testemail3@gmail.com" name="user3"
+		password="qwerty" />
+	<USER id="4" email="testemail4@gmail.com" name="user4"
+		password="qwerty"/>
+	<USER id="5" email="testemail5@gmail.com" name="user5"
+		password="qwerty"/>
+</dataset>

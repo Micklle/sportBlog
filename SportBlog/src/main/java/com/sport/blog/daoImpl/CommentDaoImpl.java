@@ -15,12 +15,10 @@ public class CommentDaoImpl extends GeneralDaoImpl<Comment> implements CommentDA
 
 	public CommentDaoImpl() {
 		super(Comment.class);
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Transactional
 	public Comment getCommentByText(String text) {
-		// TODO Auto-generated method stub
 		return (Comment) entityManager.createQuery("select c from Ñomment as c where c.text = ?").setParameter(1, text).getSingleResult();
 	}
 
