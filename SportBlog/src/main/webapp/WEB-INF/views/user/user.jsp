@@ -12,12 +12,12 @@
 		<h1>My cabinet</h1>
 		<h4>${username}</h4>
 		<img class="avatar" alt=""
-		src="http://localhost:8080/sportBlog/resources/img/users/user_${username}.jpg">
+			src="http://localhost:8080/SportBlog/resources/img/users/user_${username}.jpg">
 		<form action="upload-photo" method="POST"
 			enctype="multipart/form-data">
 			<input type="file" name="photo" accept="image/jpeg" />
 			<button type="submit">upload</button>
-		</form>
+		</form><br>
 		<a href="<c:url value="/j_spring_security_logout"/>">Log Out</a>
 	</div>
 </body>

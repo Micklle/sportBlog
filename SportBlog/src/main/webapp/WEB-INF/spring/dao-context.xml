@@ -12,9 +12,9 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:annotation-config />
-	
-	<tx:annotation-driven transaction-manager="transactionManager" />
 
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="jpaVendorAdapter">
@@ -27,11 +27,11 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 			</bean>
 		</property>
 	</bean>
-	
+
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
-	
+
 	<context:component-scan base-package="com.sport.blog.daoImpl"
 		use-default-filters="false">
 		<context:include-filter type="annotation"
